@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+        <div class="navigation">
+          <nav>
+            <ul class="mainNav">
+                <li><a runat="server" href="~/Default.aspx">Home</a></li>
+                <li><a runat="server" href="~/Borrower.aspx">Borrowers</a></li>
+                <li><a runat="server" href="~/DiskInventory.aspx">Inventory</a></li>
+                <li><a runat="server" href="~/Artists.aspx">Artists</a></li>
+            </ul>
+          </nav>
+        </div>
+        <hr />
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainPlaceholder" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer>
+                <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
+
+                </asp:ContentPlaceHolder>
+                <p>&copy; <%: DateTime.Now %> - Disk Inventory Application</p>
+            </footer>
+        </div>
+</body>
+</html>
