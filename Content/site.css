@@ -1,0 +1,174 @@
+html{
+	background: black;
+    background-image: url('../Images/Disks.jpg');
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 90% !important;
+    line-height: 1.2;
+    background-color: lightgray !important;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10%;
+}
+.navigation{
+	clear: both;
+}
+.logos{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-top: 5px;
+	width: 35%;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+nav
+{
+	font-family: "Passion One", "Alfa Slab One", cursive;
+}
+nav li
+{
+	list-style-type: none;
+	display: inline;
+}
+nav li a
+{
+	text-decoration: none;
+	display: inline-block;
+	font-size: .75em;
+	color: #000000;
+	padding: 10px 20px;
+	background: grey;
+	box-shadow: inset 2px 0 10px 5px #000000;
+	transition: all .5s;
+}
+/*makes the page you are on show in white for the navigation bar*/
+.home .homeLink,
+.locations .locationsLink,
+.FAQ .FAQLink,
+.calculator .calculatorLink,
+.contact .contactLink,
+.newsLetter .newsLetterLink
+{
+  color: white;
+  font-weight: bold;
+}
+.bubble
+{
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 10px 20px 20px;
+	background-color: #515357;
+	border-radius: 5px;
+	border: 1px solid #515357;
+	box-shadow: inset 2px 0 10px 5px #000000;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+}
+h1
+{
+	font-size: 1.5em;
+}
+footer img
+{
+	width: 75px;
+	margin-bottom: -20px;
+	margin-top: -20px;
+}
+/*media query for anything larger than a phone*/
+@media only screen and (min-width: 550px)
+{
+
+	nav
+	{
+		padding-top: 15px;
+		font-size: 1.7em;
+		margin-top: -1em
+	}
+	nav li a
+	{
+		font-size: 1em;
+	}
+	/*makes the page you are on show in white for the navigation bar*/
+	.home .homeLink,
+	.locations .locationsLink,
+	.funFacts .funFactsLink,
+	.calculator .calculatorLink,
+	.contact .contactLink
+	{
+	  color: white;
+	  font-weight: bold;
+	}
+	/*Adding a hover style so it slightly changes what it looks like when hovered over*/
+	.mainNav a:hover
+	{
+		font-weight: bold;
+		background-color: lightgray;
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	.logos{
+		width: 300px;
+	}
+	.bubble
+	{
+		font-size: 1.25em;
+	}
+	h1
+	{
+		font-size: 1.75em;
+	}
+
+	.faq{
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+	}
+	.slideShow img{
+		height: 250px;
+	}
+}
+@media only screen and (min-width: 1300px)
+{
+	.logos{
+		width: 700px;
+	}
+	/*add the animation only when the screen is big enough for the airplane to fly*/
+	.animated{
+		width: 100px;
+		height: 100px;
+		position: relative;
+		-webkit-animation-name: plane; /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+		-webkit-animation-direction: alternate-reverse; /* Safari 4.0 - 8.0 */
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		animation-name: plane;
+		animation-duration: 20s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: forwards;
+	}
+	@-webkit-keyframes plane {
+			0%   {left:0px; top:0px;}
+			25%  {left:500px; top:-40px;}
+			50%  {left:0px; top:0px;}
+			75%  {left:-500px; top:-40px;}
+			100% {left:0px; top:0px;}
+	}
+
+	/* Standard syntax */
+	@keyframes plane {
+		0%   {left:0px; top:0px;}
+		25%  {left:500px; top:-40px;}
+		50%  {left:0px; top:0px;}
+		75%  {left:-500px; top:-40px;}
+		100% {left:0px; top:0px;}
+	}
+}
