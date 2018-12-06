@@ -113,9 +113,9 @@ public partial class _Borrower : System.Web.UI.Page
             //This uses the same stored procedure Borrower_SP but with an action of UPDATE in order to update the Borrower based on the DiskID
             GridViewRow row = GridView1.Rows[e.RowIndex];
             int BorrowerID = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
-            string FirstName = (row.FindControl("txtFirstName") as TextBox).Text;
-            string LastName = (row.FindControl("txtLastName") as TextBox).Text;
-            string PhoneNumber = (row.FindControl("txtPhoneNumber") as TextBox).Text;
+            string FirstName = (row.FindControl("txtFirstNameEdit") as TextBox).Text;
+            string LastName = (row.FindControl("txtLastNameEdit") as TextBox).Text;
+            string PhoneNumber = (row.FindControl("txtPhoneNumberEdit") as TextBox).Text;
             using (SqlConnection con = new SqlConnection(
                         @"Server=F18SERVERB15\SQLDEV01;Database=DiskInventory;User Id=sa; Password=Pa$$w0rd;"))
             {

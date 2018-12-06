@@ -232,7 +232,8 @@
                     Borrower:<br />
                     <%--This dropdown finds all the borrowers and allows you to select one. it also put both the first and last names into the same dropdown--%> 
                     <asp:DropDownList ID="BorrowerLoan" runat="server" DataSourceID="SqlDataSource3" DataTextField="Name" DataValueField="BorrowerID"></asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DiskInventoryConnectionString2 %>" SelectCommand="SELECT [BorrowerID], [FirstName] + ' ' + [LastName] AS Name FROM [Borrower]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DiskInventoryConnectionString2 %>" 
+                        SelectCommand="SELECT [BorrowerID], [FirstName] + ' ' + [LastName] AS Name FROM [Borrower]"></asp:SqlDataSource>
                 </td>
                 <td style="width: 150px">
                     Borrowed Date:<br />
